@@ -1,0 +1,6 @@
+Changes
+Makefile.PL
+MANIFEST
+README
+t/NWS-Weather.t
+lib/NWS/Weather.pm
