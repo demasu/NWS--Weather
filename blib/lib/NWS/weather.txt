@@ -1,0 +1,5 @@
+Humidity 94%
+Wind Speed N 8 mph
+Barometer 30.06 in
+Dewpoint 63F (17C)
+Visibility 10.00 mi

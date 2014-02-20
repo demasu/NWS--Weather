@@ -1,6 +1,8 @@
 Revision history for Perl extension NWS::Weather.
 
-0.01  Wed Jun 12 18:01:10 2013
+0.01  Wed Jun 12 18:51:00 2013
 	- original version; created by h2xs 1.23 with options
 		-b 5.6.1 -AX NWS::Weather
-
+0.02  Thu Oct 17 10:22:00 2013 - Joshua Brandt
+	- Updated regex to have the temperature display properly all the time
+		-b 5.6.1

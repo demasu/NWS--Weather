@@ -25,13 +25,14 @@ DEPENDENCIES
 
 This module requires these other modules and libraries:
 
-  blah blah blah
+  WWW::Mechanize
+  HTML::Strip
 
 COPYRIGHT AND LICENCE
 
 Put the correct copyright and licence information here.
 
-Copyright (C) 2013 by root
+Copyright (C) 2013 by Joshua Brandt
 
 This library is free software; you can redistribute it and/or modify
 it under the same terms as Perl itself, either Perl version 5.8.8 or,

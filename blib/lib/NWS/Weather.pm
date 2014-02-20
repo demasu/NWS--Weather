@@ -17,17 +17,17 @@ our @ISA = qw(Exporter);
 # This allows declaration	use Weather ':all';
 # If you do not need this, moving things directly into @EXPORT or @EXPORT_OK
 # will save memory.
-our %EXPORT_TAGS = ( 'all' => [ qw(local haz_wx
-	
+our %EXPORT_TAGS = ( 'all' => [ qw(
+local haz_wx	
 ) ] );
 
 our @EXPORT_OK = ( @{ $EXPORT_TAGS{'all'} } );
 
-our @EXPORT = qw(local haz_wx
-	
+our @EXPORT = qw(
+local haz_wx	
 );
 
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 
 sub new {
 	my $self = {};
@@ -79,7 +79,7 @@ sub local {
 	my ($temperature, $humidity, $windspeed, $barometer, $dewpoint, $heatindex, $visibility, @temperature);
 
 	for (my $count=0; $count <= $#newweather; $count++) {
-		if ($newweather[$count] =~ /\w+\s\w+\s[-0-9]{1,3}.[CF]\s[-0-9]{1,3}.[CF]/) {
+		if ($newweather[$count] =~ /\w+\s(?:\w+\s)?[-0-9]{1,3}.[CF]\s[-0-9]{1,3}.[CF]/) {
 			$temperature = $&;
 			$temperature =~ s/([0-9]{1,3}).([CF])/$1$2/g;
 		}
@@ -123,16 +123,16 @@ sub local {
 
 1;
 __END__
-# Below is stub documentation for your module. You'd better edit it!
 
 =head1 NAME
 
-Weather - Perl extension for blah blah blah
+NWSS::Weather - Perl module to get the local weather for the inputted area from weather.gov.
 
 =head1 SYNOPSIS
 
-  use Weather;
-  blah blah blah
+  use NWS::Weather;
+  my $weather = NWS::Weather->new();
+  my @weather = $weather->local('11111');
 
 =head1 DESCRIPTION
 
@@ -161,11 +161,11 @@ If you have a web site set up for your module, mention it here.
 
 =head1 AUTHOR
 
-root, E<lt>root@astudyinfutility.comE<gt>
+Joshua Brandt, E<lt>joshua.brandt@cpanel.netE<gt>
 
 =head1 COPYRIGHT AND LICENSE
 
-Copyright (C) 2013 by root
+Copyright (C) 2013 by Joshu Brandt
 
 This library is free software; you can redistribute it and/or modify
 it under the same terms as Perl itself, either Perl version 5.8.8 or,
